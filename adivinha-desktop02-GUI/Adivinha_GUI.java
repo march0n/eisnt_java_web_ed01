@@ -16,10 +16,8 @@ public class Adivinha_GUI {
 
         int tentativaDaPessoa = 0;
 
-        // Determina o diretório do arquivo .java/.class
-        String caminhoDaDiretoria = new File(Adivinha_GUI.class.getProtectionDomain().getCodeSource().getLocation().getPath())
-                .getParent();
-        File ficheiro = new File(caminhoDaDiretoria, "topscore.txt");
+        // Caminho da mesma diretoria que o arquivo .java
+        File ficheiro = new File("adivinha-desktop02-GUI/topscore.txt");
 
         // Tenta carregar o top score de um ficheiro
         if (ficheiro.exists()) {
