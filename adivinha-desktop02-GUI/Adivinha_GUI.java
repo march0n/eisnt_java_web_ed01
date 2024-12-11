@@ -16,16 +16,19 @@ public class Adivinha_GUI {
 
         int tentativaDaPessoa = 0;
 
+        // Determina o diretório do arquivo .java/.class
+        String caminhoDaDiretoria = new File(Adivinha_GUI.class.getProtectionDomain().getCodeSource().getLocation().getPath())
+                .getParent();
+        File ficheiro = new File(caminhoDaDiretoria, "topscore.txt");
+
         // Tenta carregar o top score de um ficheiro
-        File ficheiro = new File("topscore.txt");
         if (ficheiro.exists()) {
             try (BufferedReader reader = new BufferedReader(new FileReader(ficheiro))) {
                 String linha = reader.readLine();
                 if (linha != null) {
                     topScore = Integer.parseInt(linha);
                 }
-            } // catch (IOException | NumberFormatException e) {
-            catch (Exception e) {
+            } catch (IOException | NumberFormatException e) {
                 System.out.println("Erro ao carregar o top score. Usando o valor padrão.");
             }
         }
