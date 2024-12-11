@@ -8,30 +8,17 @@ Este projeto é um jogo simples chamado **"Adivinha a Idade"**, criado com **Vaa
 
 Certifique-se de que tem as seguintes ferramentas instaladas:
 
-1. **Java**  
-   - Qualquer versão compatível com **Java 17** ou superior.  
-   - Verifique a instalação com:
-     ```bash
-     java -version
-     ```
-
-2. **Maven**  
-   - Ferramenta para gerir dependências.  
-   - Instale em [Apache Maven](https://maven.apache.org/download.cgi) e configure as variáveis de ambiente.  
-   - Verifique a instalação com:
-     ```bash
-     mvn -version
-     ```
-
-3. **Node.js**  
-   - Necessário para construir os recursos do Vaadin.  
-   - Descarregue a versão **LTS** em [Node.js](https://nodejs.org/en/download/).
-
-4. **Visual Studio Code**  
+1. **Visual Studio Code**  
    - Editor de código recomendado.  
    - Instale a extensão **Java Extension Pack** (confirme na barra de extensões do VS Code).
 
 ---
+
+
+2. **Node.js**  
+   - Necessário para construir os recursos do Vaadin.  
+   - Descarregue a versão **LTS** em [Node.js](https://nodejs.org/en/download/).
+
 
 ## Como Executar o Projeto
 
@@ -39,7 +26,7 @@ Certifique-se de que tem as seguintes ferramentas instaladas:
    - Clone com Git:
      ```bash
      git clone <URL_DO_PROJETO>
-     cd adivinha
+     cd adivinha-web
      ```
    - Ou descarregue o ficheiro ZIP e extraia-o.
 
@@ -78,8 +65,5 @@ Certifique-se de que tem as seguintes ferramentas instaladas:
 ## Recursos Úteis
 
 - [Documentação do Vaadin](https://vaadin.com/docs)
-- [Guia do Maven](https://maven.apache.org/guides/index.html)
-
 ---
 
-Se tiver dúvidas, abra uma **issue** ou entre em contacto! 😊
