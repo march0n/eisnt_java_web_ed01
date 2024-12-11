@@ -14,6 +14,8 @@ public class Adivinha_GUI {
         // Variável para armazenar o top score
         int topScore = Integer.MAX_VALUE;
 
+        int tentativaDaPessoa = 0;
+
         // Tenta carregar o top score de um ficheiro
         File ficheiro = new File("topscore.txt");
         if (ficheiro.exists()) {
@@ -22,7 +24,8 @@ public class Adivinha_GUI {
                 if (linha != null) {
                     topScore = Integer.parseInt(linha);
                 }
-            } catch (IOException | NumberFormatException e) {
+            } // catch (IOException | NumberFormatException e) {
+            catch (Exception e) {
                 System.out.println("Erro ao carregar o top score. Usando o valor padrão.");
             }
         }
@@ -34,15 +37,30 @@ public class Adivinha_GUI {
 
             System.out.println("Batota: " + numeroQueComputadorEstaAPensar);
 
-            JOptionPane.showMessageDialog(null, "Olá, bem-vind@! Estou a pensar num número entre " + MINIMO + " e " + MAXIMO);
+            JOptionPane.showMessageDialog(null,
+                    "Olá, bem-vind@! Estou a pensar num número entre " + MINIMO + " e " + MAXIMO);
 
             boolean pessoaJaAdivinhou = false;
             int numeroDeTentativas = 0;
 
             while (!pessoaJaAdivinhou) {
 
-                String palpiteDaPessoa = JOptionPane.showInputDialog(null, "Palpite", "Jogo da Adivinha", JOptionPane.QUESTION_MESSAGE);
-                int tentativaDaPessoa = Integer.parseInt(palpiteDaPessoa);
+                boolean palpiteValido = false;
+                while (!palpiteValido) {
+                    String palpiteDaPessoa = JOptionPane.showInputDialog(null, "Palpite (entre " + MINIMO + " e " + MAXIMO + ")", 
+                                                                          "Jogo da Adivinha", JOptionPane.QUESTION_MESSAGE);
+                    try {
+                        tentativaDaPessoa = Integer.parseInt(palpiteDaPessoa);
+                        
+                        if (tentativaDaPessoa >= MINIMO && tentativaDaPessoa <= MAXIMO) {
+                            palpiteValido = true;
+                        } else {
+                            JOptionPane.showMessageDialog(null, "Por favor, insira um número entre " + MINIMO + " e " + MAXIMO + ".");
+                        }
+                    } catch (NumberFormatException e) {
+                        JOptionPane.showMessageDialog(null, "Tem de introduzir um número válido.");
+                    }
+                }
 
                 numeroDeTentativas++;
 
@@ -52,13 +70,15 @@ public class Adivinha_GUI {
                     JOptionPane.showMessageDialog(null, "Nope... é maior!!");
                 } else {
                     pessoaJaAdivinhou = true;
-                    JOptionPane.showMessageDialog(null, "PARABÉNS! Acertou... O número era " + numeroQueComputadorEstaAPensar);
+                    JOptionPane.showMessageDialog(null,
+                            "PARABÉNS! Acertou... O número era " + numeroQueComputadorEstaAPensar);
                 }
             }
 
             // Verifica se o jogador bateu o recorde
             if (numeroDeTentativas < topScore) {
-                JOptionPane.showMessageDialog(null, "E bateu o recorde do jogo! Novo recorde: " + numeroDeTentativas + " tentativas.");
+                JOptionPane.showMessageDialog(null,
+                        "E bateu o recorde do jogo! Novo recorde: " + numeroDeTentativas + " tentativas.");
                 topScore = numeroDeTentativas;
 
                 // Atualiza o ficheiro de top score
@@ -69,7 +89,8 @@ public class Adivinha_GUI {
                 }
             }
 
-            String intencaoDoJogador = JOptionPane.showInputDialog(null, "Continuar? (s/n)", "Quão viciado está você", JOptionPane.QUESTION_MESSAGE);
+            String intencaoDoJogador = JOptionPane.showInputDialog(null, "Continuar? (s/n)", "Quão viciado está você",
+                    JOptionPane.QUESTION_MESSAGE);
 
             if (intencaoDoJogador.toLowerCase().charAt(0) == 'n') {
                 pessoaQuerContinuarAJogar = false;
