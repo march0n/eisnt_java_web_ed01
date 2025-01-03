@@ -1,0 +1,5 @@
+Computador, Quantidade: 5
+Teclado, Quantidade: 10
+Rato, Quantidade: 8
+Monitor, Quantidade: 2
+Impressora, Quantidade: 3
