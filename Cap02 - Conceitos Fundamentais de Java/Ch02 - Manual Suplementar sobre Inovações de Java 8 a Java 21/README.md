@@ -16,6 +16,6 @@ Este manual suplementar foca-se em:
 3. **Explore as secções conforme necessário:** Não é necessário ler tudo de uma vez; utilize as secções como referência pontual.
 
 ## Nota Final:
-Este recurso foi criado para ajudar os alunos a compreenderem melhor as especificidades da programação em Java no âmbito do curso. Foi preparado com o objetivo de tornar a aprendizagem mais eficaz e acessível, proporcionando suporte adicional em pontos que podem ser desafiantes.
+Este recurso foi criado para ajudar @s formand@s a compreenderem melhor as especificidades da programação em Java no âmbito do curso. Foi preparado com o objetivo de tornar a aprendizagem mais eficaz e acessível, proporcionando suporte adicional em pontos que podem ser desafiantes.
 
 Aproveite este suplemento e bons estudos! 💻
