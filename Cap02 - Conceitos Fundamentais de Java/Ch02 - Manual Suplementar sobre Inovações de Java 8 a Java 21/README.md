@@ -1,4 +1,4 @@
-# README: Documento Suplementar
+# Documento Suplementar
 
 Este documento é totalmente **suplementar** e tem como objetivo **complementar o Manual principal do curso**, que está disponibilizado no Moodle. 
 
