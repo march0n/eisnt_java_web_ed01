@@ -1,4 +1,7 @@
-# Guia: Configuração de Projeto Spring Boot
+## Solução Passo-a-Passo do Exercício 02 do Capítulo 9
+
+##         (Gestão de Clientes e Pedidos)
+
 
 ## 1. Início do Projeto com Spring Initializr
 
