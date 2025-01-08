@@ -21,6 +21,7 @@ public class Produto {
         this.preco = preco;
     }
 
+
     // Getters e Setters
 
     public Long getId() {
@@ -42,9 +43,10 @@ public class Produto {
     public Double getPreco() {
         return preco;
     }
-
+    
     public void setPreco(Double preco) {
         this.preco = preco;
     }
+    
 
 }
