@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventário de Livros</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        .form {
+            margin-bottom: 20px;
+        }
+        .form input {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+        .form button {
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form button:hover {
+            background-color: #0056b3;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .remove-btn {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .remove-btn:hover {
+            background-color: #b02a37;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inventário de Livros</h1>
+    <div class="form">
+        <input type="text" id="referencia" placeholder="Referência">
+        <input type="text" id="titulo" placeholder="Título">
+        <input type="text" id="descricao" placeholder="Descrição">
+        <input type="number" id="preco" placeholder="Preço">
+        <input type="number" id="quantidade" placeholder="Quantidade">
+        <button onclick="adicionarLivro()">Adicionar Livro</button>
+    </div>
+    <p id="error" class="error"></p>
+    <ul id="livros-lista"></ul>
+
+    <script>
+        const API_URL = "http://localhost:8080/api/livros";
+
+        async function listarLivros() {
+            try {
+                const response = await fetch(API_URL);
+                const livros = await response.json();
+                const lista = document.getElementById("livros-lista");
+                lista.innerHTML = ""; // Limpa a lista antes de atualizar
+                livros.forEach((livro) => {
+                    const li = document.createElement("li");
+                    li.innerHTML = `
+                        <strong>${livro.referencia}</strong>: ${livro.titulo} 
+                        (${livro.descricao}) - Preço: €${livro.preco.toFixed(2)} 
+                        | Quantidade: ${livro.quantidade}
+                        <button class="remove-btn" onclick="removerLivro(${livro.id})">Remover</button>
+                    `;
+                    lista.appendChild(li);
+                });
+            } catch (error) {
+                mostrarErro("Erro ao buscar livros. Tente novamente.");
+                console.error(error);
+            }
+        }
+
+        async function adicionarLivro() {
+            const referencia = document.getElementById("referencia").value;
+            const titulo = document.getElementById("titulo").value;
+            const descricao = document.getElementById("descricao").value;
+            const preco = parseFloat(document.getElementById("preco").value);
+            const quantidade = parseInt(document.getElementById("quantidade").value);
+
+            if (!referencia || !titulo || !descricao || isNaN(preco) || isNaN(quantidade)) {
+                mostrarErro("Por favor, preencha todos os campos corretamente!");
+                return;
+            }
+
+            try {
+                await fetch(API_URL, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ referencia, titulo, descricao, preco, quantidade }),
+                });
+                document.getElementById("referencia").value = "";
+                document.getElementById("titulo").value = "";
+                document.getElementById("descricao").value = "";
+                document.getElementById("preco").value = "";
+                document.getElementById("quantidade").value = "";
+                listarLivros(); // Atualiza a lista
+            } catch (error) {
+                mostrarErro("Erro ao adicionar livro. Tente novamente.");
+                console.error(error);
+            }
+        }
+
+        async function removerLivro(id) {
+            try {
+                await fetch(`${API_URL}/${id}`, { method: "DELETE" });
+                listarLivros(); // Atualiza a lista
+            } catch (error) {
+                mostrarErro("Erro ao remover livro. Tente novamente.");
+                console.error(error);
+            }
+        }
+
+        function mostrarErro(mensagem) {
+            const errorElement = document.getElementById("error");
+            errorElement.textContent = mensagem;
+            setTimeout(() => {
+                errorElement.textContent = "";
+            }, 3000); // Remove o erro após 3 segundos
+        }
+
+        listarLivros();
+    </script>
+</body>
+</html>
