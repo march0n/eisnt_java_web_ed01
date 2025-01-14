@@ -1,6 +1,9 @@
 package com.example.inventory.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 @Entity
 public class Item {
@@ -11,16 +14,11 @@ public class Item {
     private String name;
     private int quantity;
 
-    @ManyToOne
-    @JoinColumn(name = "category_id")
-    private Category category;
-
     public Item() {}
 
-    public Item(String name, int quantity, Category category) {
+    public Item(String name, int quantity) {
         this.name = name;
         this.quantity = quantity;
-        this.category = category;
     }
 
     public Long getId() {
@@ -45,13 +43,5 @@ public class Item {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
     }
 }

@@ -11,6 +11,7 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Route("")
 public class InventoryView extends VerticalLayout {
@@ -23,14 +24,20 @@ public class InventoryView extends VerticalLayout {
     private final Button addButton = new Button("Adicionar");
     private final Button clearButton = new Button("Limpar");
 
+    private Item selectedItem = null;
+
     public InventoryView(ItemService itemService) {
         this.itemService = itemService;
 
         configureGrid();
         configureForm();
+        configureFilter();
 
         HorizontalLayout filterLayout = new HorizontalLayout(nameFilter);
-        add(filterLayout, itemGrid, new HorizontalLayout(itemNameField, itemQuantityField, addButton, clearButton));
+        HorizontalLayout buttonLayout = new HorizontalLayout(addButton, clearButton);
+        buttonLayout.setAlignItems(Alignment.END);
+
+        add(filterLayout, itemGrid, new HorizontalLayout(itemNameField, itemQuantityField), buttonLayout);
 
         updateGrid();
     }
@@ -46,39 +53,61 @@ public class InventoryView extends VerticalLayout {
             });
             return deleteButton;
         });
+
+        // Adicionar evento para seleção de linha
+        itemGrid.asSingleSelect().addValueChangeListener(event -> {
+            selectedItem = event.getValue();
+            if (selectedItem != null) {
+                itemNameField.setValue(selectedItem.getName());
+                itemQuantityField.setValue(String.valueOf(selectedItem.getQuantity()));
+            } else {
+                clearForm();
+            }
+        });
+
         itemGrid.setItems(itemService.getAllItems());
     }
 
     private void configureForm() {
         addButton.addClickListener(click -> {
-            String name = itemNameField.getValue();
-            String quantityStr = itemQuantityField.getValue();
-
-            if (name.isEmpty() || quantityStr.isEmpty()) {
-                Notification.show("Todos os campos são obrigatórios!");
-                return;
+            if (selectedItem == null) {
+                // Criar novo item
+                Item newItem = new Item();
+                newItem.setName(itemNameField.getValue());
+                newItem.setQuantity(Integer.parseInt(itemQuantityField.getValue()));
+                itemService.saveItem(newItem);
+                Notification.show("Item adicionado!");
+            } else {
+                // Atualizar item existente
+                selectedItem.setName(itemNameField.getValue());
+                selectedItem.setQuantity(Integer.parseInt(itemQuantityField.getValue()));
+                itemService.saveItem(selectedItem);
+                Notification.show("Item atualizado!");
             }
-
-            int quantity = Integer.parseInt(quantityStr);
-            Item newItem = new Item(name, quantity);
-            itemService.saveItem(newItem);
-
             updateGrid();
             clearForm();
-            Notification.show("Item adicionado!");
         });
 
         clearButton.addClickListener(click -> clearForm());
     }
 
-    private void clearForm() {
-        itemNameField.clear();
-        itemQuantityField.clear();
+    private void configureFilter() {
+        nameFilter.addValueChangeListener(event -> {
+            String filterText = event.getValue();
+            List<Item> filteredItems = itemService.getAllItems().stream()
+                    .filter(item -> item.getName().toLowerCase().contains(filterText.toLowerCase()))
+                    .collect(Collectors.toList());
+            itemGrid.setItems(filteredItems);
+        });
     }
 
     private void updateGrid() {
-        String filter = nameFilter.getValue();
-        List<Item> filteredItems = filter.isEmpty() ? itemService.getAllItems() : itemService.filterItemsByName(filter);
-        itemGrid.setItems(filteredItems);
+        itemGrid.setItems(itemService.getAllItems());
+    }
+
+    private void clearForm() {
+        selectedItem = null;
+        itemNameField.clear();
+        itemQuantityField.clear();
     }
 }
