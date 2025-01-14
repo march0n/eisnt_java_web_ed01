@@ -1,0 +1,7 @@
+# ⚠️ Aviso de Desenvolvimento
+
+Os ficheiros presentes nesta pasta estão atualmente em fase de desenvolvimento e ainda não estão prontos para utilização. Alterações significativas podem ocorrer a qualquer momento.
+
+Recomenda-se que **não utilize ou dependa destes ficheiros** até que o trabalho esteja concluído e os ficheiros sejam oficialmente considerados estáveis.
+
+Obrigado pela compreensão.
