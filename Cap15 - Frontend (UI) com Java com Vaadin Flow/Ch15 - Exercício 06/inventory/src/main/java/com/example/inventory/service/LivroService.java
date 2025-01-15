@@ -19,8 +19,8 @@ public class LivroService {
         return livroRepository.findAll();
     }
 
-    public List<Livro> filterLivrosByName(String nameFilter) {
-        return livroRepository.findByNameContainingIgnoreCase(nameFilter);
+    public List<Livro> filterLivrosByReferencia(String referenciaFilter) {
+        return livroRepository.findByReferenciaContainingIgnoreCase(referenciaFilter);
     }
 
     public Livro saveLivro(Livro livro) {

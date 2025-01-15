@@ -11,16 +11,21 @@ public class Livro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private int quantity;
+    private String referencia;
+    private double preco;
+    private String descricao;
+    private int quantidade;
 
     public Livro() {}
 
-    public Livro(String name, int quantity) {
-        this.name = name;
-        this.quantity = quantity;
+    public Livro(String referencia, double preco, String descricao, int quantidade) {
+        this.referencia = referencia;
+        this.preco = preco;
+        this.descricao = descricao;
+        this.quantidade = quantidade;
     }
 
+    // Getters e Setters
     public Long getId() {
         return id;
     }
@@ -29,28 +34,6 @@ public class Livro {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    private String referencia;
-    private double preco;
-    private String descricao;
-    private int quantidade;
-
-    // Getters and Setters
     public String getReferencia() {
         return referencia;
     }
@@ -82,5 +65,4 @@ public class Livro {
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
     }
-    
 }

@@ -24,7 +24,7 @@ public class InventoryView extends VerticalLayout {
 
     private final LivroService livroService;
     private final Grid<Livro> livroGrid = new Grid<>(Livro.class, false);
-    private final TextField nameFilter = new TextField("Filtrar por Nome");
+    private final TextField referenciaFilter = new TextField("Filtrar por Referência");
     private final TextField referenciaField = new TextField("Referência");
     private final NumberField precoField = new NumberField("Preço");
     private final TextArea descricaoField = new TextArea("Descrição");
@@ -41,7 +41,7 @@ public class InventoryView extends VerticalLayout {
         configureForm();
         configureFilter();
 
-        HorizontalLayout filterLayout = new HorizontalLayout(nameFilter);
+        HorizontalLayout filterLayout = new HorizontalLayout(referenciaFilter);
         HorizontalLayout formLayout = new HorizontalLayout(referenciaField, precoField, descricaoField, quantidadeField);
         HorizontalLayout buttonLayout = new HorizontalLayout(addButton, clearButton);
         buttonLayout.setAlignItems(Alignment.END);
@@ -107,10 +107,10 @@ public class InventoryView extends VerticalLayout {
     }
 
     private void configureFilter() {
-        nameFilter.setValueChangeMode(ValueChangeMode.LAZY);
-        nameFilter.setValueChangeTimeout(300);
+        referenciaFilter.setValueChangeMode(ValueChangeMode.LAZY);
+        referenciaFilter.setValueChangeTimeout(300);
 
-        nameFilter.addValueChangeListener(event -> {
+        referenciaFilter.addValueChangeListener(event -> {
             String filterText = event.getValue().toLowerCase();
             applyFilter(filterText);
         });
