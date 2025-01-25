@@ -1,6 +1,5 @@
 ### **README.md**
 
-```markdown
 # Calculator Vaadin Application
 
 Este é um projeto simples de uma calculadora desenvolvida com **Vaadin Flow** e **Spring Boot**. A calculadora suporta operações básicas, como adição, subtração, multiplicação, divisão e raiz quadrada, com uma interface interativa baseada na web.
