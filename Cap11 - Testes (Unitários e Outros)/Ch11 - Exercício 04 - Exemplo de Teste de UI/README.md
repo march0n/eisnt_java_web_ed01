@@ -1,7 +1,3 @@
-Aqui está o **README.md** atualizado, incluindo o nome e as configurações específicas do projeto:
-
----
-
 ### **README.md**
 
 ```markdown
@@ -163,13 +159,3 @@ Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalh
 
 Desenvolvido por **Luís Simões da Cunha**.
 ```
-
----
-
-### **Principais Ajustes**
-
-1. **Versão do Java**: Atualizado para **Java 21**.
-2. **Dependências do `pom.xml`**: Incluídas informações sobre as versões utilizadas.
-3. **Nome do Autor**: Adicionado o nome **Luís Simões da Cunha** como autor.
-
-Se precisar de algo mais ou de algum ajuste no texto, é só pedir! 😊
