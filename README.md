@@ -1,5 +1,7 @@
 ﻿# Programação Web com Java
 
+![Banner do Repositório](./repo_picture.png)
+
 Este repositório contém um tutorial completo e detalhado sobre Programação Web com Java, utilizando especialmente as tecnologias **Spring Boot** e **Vaadin Flow** (mas não só). O conteúdo é organizado em capítulos que abordam desde os fundamentos do Java até a criação de aplicações completas com interfaces web, segurança e funcionalidades modernas.
 
 ---
