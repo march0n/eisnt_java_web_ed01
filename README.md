@@ -4,6 +4,14 @@ Este repositório contém um tutorial completo e detalhado sobre Programação W
 
 ---
 
+## Demonstrações Práticas em Vídeo
+
+Para complementar o conteúdo deste tutorial, criámos uma **playlist no YouTube** com demonstrações práticas curtas e diretas ao ponto. Estas demonstrações ajudam a solidificar os conceitos abordados nos capítulos.  
+
+👉 **[Aceda à playlist no YouTube aqui](https://www.youtube.com/playlist?list=PLIw9EqnzwDgbXHzNJ9cuE3SXrcXpMDBMd)** 👈  
+
+---
+
 ## Índice
 
 ### Capítulo 1: Introdução à Programação Web com Java
