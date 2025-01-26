@@ -105,15 +105,12 @@ Para complementar o conteúdo deste tutorial, criámos uma **playlist no YouTube
 - Eventos do Ciclo de Vida da Navegação
 - Redirecionamento e Encaminhamento durante a Navegação
 
----
 
-## Glossário
-- Termos e conceitos utilizados ao longo do tutorial.
+# O Curso é dado na empresa EISnt (Curso Financiado ao Abrigo do PRR)
 
-## Bibliografia
-- Sugestões de recursos adicionais para aprofundamento.
+# O manual do curso é de acesso restrito aos formandos
+# O repositório, no entanto, é público 😉
 
----
 
-Explore os capítulos e desenvolva as suas competências em programação web com Java, Spring Boot e Vaadin!
+
 
