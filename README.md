@@ -106,10 +106,13 @@ Para complementar o conteúdo deste tutorial, criámos uma **playlist no YouTube
 - Redirecionamento e Encaminhamento durante a Navegação
 
 
-### O Curso é dado na empresa EISnt (Curso Financiado ao Abrigo do PRR)
+O Curso é dado na empresa *EISnt* (Curso Financiado ao Abrigo do PRR)
+O manual do curso (para já) é de acesso restrito aos formandos
 
-### O manual do curso é de acesso restrito aos formandos
-### O repositório, no entanto, é público 😉
+Mas já muitos pequenos guias neste repositório, com destaque para o material dos Apêndices 😊
+
+
+
 
 
 
