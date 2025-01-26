@@ -106,12 +106,25 @@ Para complementar o conteúdo deste tutorial, criámos uma **playlist no YouTube
 - Redirecionamento e Encaminhamento durante a Navegação
 
 
-O Curso é dado na empresa *EISnt* (Curso Financiado ao Abrigo do PRR)
-O manual do curso (para já) é de acesso restrito aos formandos
+## Bibliografia ##
 
-Mas já muitos pequenos guias neste repositório, com destaque para o material dos Apêndices 😊
+Coelho, P. (2016). Programação em Java: Curso completo (5.ª ed. atualizada). FCA.
+Duarte, A. (2021). Practical Vaadin. Apress.
+Marcelino, M. J., & Mendes, A. J. (2016). Fundamentos de programação em Java (4.ª ed. atualizada e aumentada). FCA.
+Martins, F. M. (2017). Java 8: POO + construções funcionais. FCA.
+Musib, S. (2022). Spring Boot in practice. Manning Publications Co.
+
+Turnquist, G. L. (2023). Learning Spring Boot 3.0: Build Modern, Cloud-Native, and Distributed Systems Using Spring Boot (3rd ed.). Packt Publishing.
 
 
+Sugestões de Recursos Adicionais para Aprofundamento
+Para expandir seu conhecimento e habilidades, considere explorar os seguintes recursos:
+•	Documentação Oficial do Spring: Uma fonte abrangente e detalhada sobre os diversos projetos Spring.
+•	Documentação Oficial do Vaadin: Estão sempre a aparecer novidades, uma das quais a possibilidade de usar assistentes de IA (Vaadin Copilot) para assistir na elaboração do UI.
+•	Tutoriais e Artigos Especializados: Plataformas como Baeldung oferecem tutoriais aprofundados sobre Spring Boot e JPA.
+•	Cursos Online: Plataformas como Udemy e Coursera disponibilizam cursos focados em Spring Boot e desenvolvimento de APIs RESTful.
+•	Repositórios no GitHub: Explore projetos open-source para ver implementações práticas e padrões de design em uso.
+ 
 
 
 
