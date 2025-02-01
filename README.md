@@ -134,5 +134,5 @@ Para expandir seu conhecimento e habilidades, considere explorar os seguintes re
 
 Para Descarregar Pasta com Exemplos para Trabalho 2 (Trabalho Final)
 
-- Pode usar esta hiperligação: [Exemplos Trabalho Final](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fluiscunhacsc%2Feisnt_java_web_ed01%2Ftree%2Fmain%2FTrabalho%25202)
+- Pode usar esta hiperligação: [Exemplos para Trabalho Final](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fluiscunhacsc%2Feisnt_java_web_ed01%2Ftree%2Fmain%2FTrabalho%25202)
 
