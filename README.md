@@ -130,5 +130,9 @@ Para expandir seu conhecimento e habilidades, considere explorar os seguintes re
 - **Repositórios no GitHub**: Explore projetos open-source para ver implementações práticas e padrões de design em uso.  
 
 
+## Link para Descarregar Exemplos de Base para Trabalho Final
 
+Para Descarregar Pasta com Exemplos para Trabalho 2 (Trabalho Final)
+
+- Pode usar esta hiperligação: [Exemplos Trabalho Final] (https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fluiscunhacsc%2Feisnt_java_web_ed01%2Ftree%2Fmain%2FTrabalho%25202)
 
