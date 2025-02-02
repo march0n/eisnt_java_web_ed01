@@ -1,4 +1,4 @@
-package pt.archkode.inventory.views.inventory;
+package pt.example.inventory.views.inventory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,9 +30,9 @@ import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.CriteriaQuery;
 import jakarta.persistence.criteria.Predicate;
 import jakarta.persistence.criteria.Root;
-import pt.archkode.inventory.data.SampleInventory;
-import pt.archkode.inventory.services.SampleInventoryService;
-import pt.archkode.inventory.views.MainLayout;
+import pt.example.inventory.data.SampleInventory;
+import pt.example.inventory.services.SampleInventoryService;
+import pt.example.inventory.views.MainLayout;
 
 @PageTitle("Inventory Listing")
 @Route(value = "", layout = MainLayout.class)

@@ -1,12 +1,12 @@
-package pt.archkode.inventory.services;
+package pt.example.inventory.services;
 
 import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
-import pt.archkode.inventory.data.SampleInventory;
-import pt.archkode.inventory.data.SampleInventoryRepository;
+import pt.example.inventory.data.SampleInventory;
+import pt.example.inventory.data.SampleInventoryRepository;
 
 @Service
 public class SampleInventoryService {

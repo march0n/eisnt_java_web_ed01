@@ -1,4 +1,4 @@
-package pt.archkode.inventory.data;
+package pt.example.inventory.data;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

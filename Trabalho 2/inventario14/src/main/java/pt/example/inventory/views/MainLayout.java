@@ -1,4 +1,4 @@
-package pt.archkode.inventory.views;
+package pt.example.inventory.views;
 
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
@@ -22,10 +22,10 @@ import com.vaadin.flow.theme.lumo.LumoUtility;
 import java.io.ByteArrayInputStream;
 import java.util.Optional;
 import org.vaadin.lineawesome.LineAwesomeIcon;
-import pt.archkode.inventory.data.User;
-import pt.archkode.inventory.security.AuthenticatedUser;
-import pt.archkode.inventory.views.inventory.InventoryGridView;
-import pt.archkode.inventory.views.inventory.InventoryView;
+import pt.example.inventory.data.User;
+import pt.example.inventory.security.AuthenticatedUser;
+import pt.example.inventory.views.inventory.InventoryGridView;
+import pt.example.inventory.views.inventory.InventoryView;
 
 /**
  * The main view is a top-level placeholder for other views.

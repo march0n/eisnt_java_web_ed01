@@ -1,4 +1,4 @@
-package pt.archkode.inventory.views.login;
+package pt.example.inventory.views.login;
 
 import com.vaadin.flow.component.login.LoginI18n;
 import com.vaadin.flow.component.login.LoginOverlay;
@@ -9,7 +9,7 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.router.internal.RouteUtil;
 import com.vaadin.flow.server.VaadinService;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
-import pt.archkode.inventory.security.AuthenticatedUser;
+import pt.example.inventory.security.AuthenticatedUser;
 
 @AnonymousAllowed
 @PageTitle("Login")

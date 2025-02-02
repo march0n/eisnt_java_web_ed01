@@ -1,4 +1,4 @@
-package pt.archkode.inventory.views.inventory;
+package pt.example.inventory.views.inventory;
 
 import java.util.Optional;
 
@@ -30,9 +30,9 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.spring.data.VaadinSpringDataHelpers;
 
 import jakarta.annotation.security.RolesAllowed;
-import pt.archkode.inventory.data.SampleInventory;
-import pt.archkode.inventory.services.SampleInventoryService;
-import pt.archkode.inventory.views.MainLayout;
+import pt.example.inventory.data.SampleInventory;
+import pt.example.inventory.services.SampleInventoryService;
+import pt.example.inventory.views.MainLayout;
 
 @PageTitle("Inventory Manager")
 @Route(value = "inventory-manager/:sampleInventoryID?/:action?(edit)", layout = MainLayout.class)
@@ -109,6 +109,13 @@ public class InventoryView extends Div implements BeforeEnterObserver {
 
         save.addClickListener(e -> {
             try {
+                // Verifica se todos os campos estão preenchidos
+                if (ref.isEmpty() || name.isEmpty() || description.isEmpty() || quantity.isEmpty() || price.isEmpty()) {
+                    Notification.show("All fields must be filled before saving.", 3000, Position.MIDDLE)
+                            .addThemeVariants(NotificationVariant.LUMO_ERROR);
+                    return;
+                }
+                
                 if (this.sampleInventory == null) {
                     this.sampleInventory = new SampleInventory();
                 }
@@ -127,8 +134,9 @@ public class InventoryView extends Div implements BeforeEnterObserver {
                 Notification.show("Failed to update the data. Check again that all values are valid");
             }
         });
-    }
 
+    }
+    
     @Override
     public void beforeEnter(BeforeEnterEvent event) {
         Optional<Long> sampleInventoryId = event.getRouteParameters().get(SAMPLEINVENTORY_ID).map(Long::parseLong);

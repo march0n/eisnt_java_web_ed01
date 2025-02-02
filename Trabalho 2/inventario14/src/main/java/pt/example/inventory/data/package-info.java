@@ -1,4 +1,4 @@
 @NonNullApi
-package pt.archkode.inventory.services;
+package pt.example.inventory.data;
 
 import org.springframework.lang.NonNullApi;

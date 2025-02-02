@@ -1,4 +1,4 @@
-package pt.archkode.inventory.security;
+package pt.example.inventory.security;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -9,8 +9,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import pt.archkode.inventory.data.User;
-import pt.archkode.inventory.data.UserRepository;
+import pt.example.inventory.data.User;
+import pt.example.inventory.data.UserRepository;
 
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {

@@ -1,4 +1,4 @@
-package pt.archkode.inventory.data;
+package pt.example.inventory.data;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;

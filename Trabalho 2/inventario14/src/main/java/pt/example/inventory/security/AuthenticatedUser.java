@@ -1,12 +1,12 @@
-package pt.archkode.inventory.security;
+package pt.example.inventory.security;
 
 import com.vaadin.flow.spring.security.AuthenticationContext;
 import java.util.Optional;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-import pt.archkode.inventory.data.User;
-import pt.archkode.inventory.data.UserRepository;
+import pt.example.inventory.data.User;
+import pt.example.inventory.data.UserRepository;
 
 @Component
 public class AuthenticatedUser {
