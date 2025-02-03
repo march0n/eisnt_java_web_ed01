@@ -1,0 +1,17 @@
+{
+  "frontendFolder": "C:/Users/luisl/Desktop/calculator-vaadin/calculator-vaadin/./src/main/frontend",
+  "themeFolder": "themes",
+  "themeResourceFolder": "C:/Users/luisl/Desktop/calculator-vaadin/calculator-vaadin/./src/main/frontend/generated/jar-resources",
+  "staticOutput": "C:/Users/luisl/Desktop/calculator-vaadin/calculator-vaadin/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
+  "generatedFolder": "generated",
+  "statsOutput": "C:\\Users\\luisl\\Desktop\\calculator-vaadin\\calculator-vaadin\\target\\classes\\META-INF\\VAADIN\\config",
+  "frontendBundleOutput": "C:\\Users\\luisl\\Desktop\\calculator-vaadin\\calculator-vaadin\\target\\classes\\META-INF\\VAADIN\\webapp",
+  "devBundleOutput": "C:/Users/luisl/Desktop/calculator-vaadin/calculator-vaadin/target/dev-bundle/webapp",
+  "devBundleStatsOutput": "C:/Users/luisl/Desktop/calculator-vaadin/calculator-vaadin/target/dev-bundle/config",
+  "jarResourcesFolder": "C:/Users/luisl/Desktop/calculator-vaadin/calculator-vaadin/./src/main/frontend/generated/jar-resources",
+  "themeName": "",
+  "clientServiceWorkerSource": "C:\\Users\\luisl\\Desktop\\calculator-vaadin\\calculator-vaadin\\target\\sw.ts",
+  "pwaEnabled": false,
+  "offlineEnabled": false,
+  "offlinePath": "'offline.html'"
+}

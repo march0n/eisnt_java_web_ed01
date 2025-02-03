@@ -1,7 +1,17 @@
 # Fork Marchon
 # Programação Web com Java
 
+<img src="./repo_picture.png" alt="Banner do Repositório" width="25%" />
+
 Este repositório contém um tutorial completo e detalhado sobre Programação Web com Java, utilizando especialmente as tecnologias **Spring Boot** e **Vaadin Flow** (mas não só). O conteúdo é organizado em capítulos que abordam desde os fundamentos do Java até a criação de aplicações completas com interfaces web, segurança e funcionalidades modernas.
+
+---
+
+## Demonstrações Práticas em Vídeo
+
+Para complementar o conteúdo deste tutorial, criámos uma **playlist no YouTube** com demonstrações práticas curtas e diretas ao ponto. Estas demonstrações ajudam a solidificar os conceitos abordados nos capítulos.  
+
+👉 **[Aceda à playlist no YouTube aqui](https://www.youtube.com/playlist?list=PLIw9EqnzwDgbXHzNJ9cuE3SXrcXpMDBMd)** 👈  
 
 ---
 
@@ -96,15 +106,34 @@ Este repositório contém um tutorial completo e detalhado sobre Programação W
 - Eventos do Ciclo de Vida da Navegação
 - Redirecionamento e Encaminhamento durante a Navegação
 
----
 
-## Glossário
-- Termos e conceitos utilizados ao longo do tutorial.
+
 
 ## Bibliografia
-- Sugestões de recursos adicionais para aprofundamento.
+
+- Coelho, P. (2016). *Programação em Java: Curso completo* (5.ª ed. atualizada). FCA.  
+- Duarte, A. (2021). *Practical Vaadin*. Apress.  
+- Marcelino, M. J., & Mendes, A. J. (2016). *Fundamentos de programação em Java* (4.ª ed. atualizada e aumentada). FCA.  
+- Martins, F. M. (2017). *Java 8: POO + construções funcionais*. FCA.  
+- Musib, S. (2022). *Spring Boot in practice*. Manning Publications Co.  
+- Turnquist, G. L. (2023). *Learning Spring Boot 3.0: Build Modern, Cloud-Native, and Distributed Systems Using Spring Boot* (3rd ed.). Packt Publishing.  
 
 ---
 
-Explore os capítulos e desenvolva as suas competências em programação web com Java, Spring Boot e Vaadin!
+## Sugestões de Recursos Adicionais para Aprofundamento
+
+Para expandir seu conhecimento e habilidades, considere explorar os seguintes recursos:
+
+- **Documentação Oficial do Spring**: Uma fonte abrangente e detalhada sobre os diversos projetos Spring.  
+- **Documentação Oficial do Vaadin**: Estão sempre a aparecer novidades, como o uso de assistentes de IA (Vaadin Copilot) para ajudar na criação do UI.  
+- **Tutoriais e Artigos Especializados**: Plataformas como [Baeldung](https://www.baeldung.com) oferecem tutoriais aprofundados sobre Spring Boot e JPA.  
+- **Cursos Online**: Plataformas como [Udemy](https://www.udemy.com) e [Coursera](https://www.coursera.org) disponibilizam cursos focados em Spring Boot e desenvolvimento de APIs RESTful.  
+- **Repositórios no GitHub**: Explore projetos open-source para ver implementações práticas e padrões de design em uso.  
+
+
+## Link para Descarregar Exemplos de Base para Trabalho Final
+
+Para Descarregar Pasta com Exemplos para Trabalho 2 (Trabalho Final)
+
+- Pode usar esta hiperligação: [Exemplos para Trabalho Final](https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2Fluiscunhacsc%2Feisnt_java_web_ed01%2Ftree%2Fmain%2FTrabalho%25202)
 
